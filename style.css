@@ -8,7 +8,7 @@
 header{
     width:100vw;
     height: 80px;
-    background-color: rgb(15,15,15);
+    background-color:rgb(15,15,15);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,7 +34,7 @@ main{
 
     width:100vw;
     height: calc(100vh - 80px);
-    background-color: rgb(51,58,64);
+    background-color:rgb(51,58,64);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,7 +58,7 @@ main{
     width:280px;
     height:280px;
     border-radius:50%;
-    background-image: url("/Images2/women-2.jpg");
+    background-image: url("/Images2/music1.jpg");
     background-size:cover;
 }
 
