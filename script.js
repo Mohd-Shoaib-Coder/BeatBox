@@ -2,7 +2,7 @@ let songName=document.querySelector("#song-name")
 let songSinger=document.querySelector("#song-singer")
 let songImage=document.querySelector(".song-image")
 let playPauseImg=document.querySelector("#play-pause")
-
+let volumeRange=document.querySelector("#volume-range")
 
 
 let index=0;
@@ -156,3 +156,10 @@ function previousSong(){
         playSong()
     }
 }
+
+function volume(){
+
+    track.volume=volumeRange.value/100;
+
+}
+
