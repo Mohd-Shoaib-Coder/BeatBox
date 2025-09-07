@@ -3,13 +3,16 @@ let songSinger=document.querySelector("#song-singer")
 let songImage=document.querySelector(".song-image")
 let playPauseImg=document.querySelector("#play-pause")
 let volumeRange=document.querySelector("#volume-range")
-
+let volSvg=document.querySelector("#vol-svg")
 
 let index=0;
 
 let playingSong=false;
 
 let track=document.createElement("audio")
+track.volume=1;
+
+
 
 let songs=[{
 
@@ -92,7 +95,7 @@ function loadTrack(){
     songName.innerHTML=songs[index].name;
     songSinger.innerHTML=songs[index].singer;
     songImage.style=`background-image:url("${songs[index].image}")`
-
+    volume()
 }
 
 loadTrack(index)
@@ -160,6 +163,13 @@ function previousSong(){
 function volume(){
 
     track.volume=volumeRange.value/100;
+    if(volumeRange.value==0){
+        volSvg.style.fill = "white";
+        volSvg.src="Images/mute.svg"
+    }else{
+
+        volSvg.src="/Images/volume.svg"
+    }
 
 }
 

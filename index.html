@@ -23,9 +23,10 @@
 <div class="volume-div">
 <div class="volume-img">
 
-<img src="/Images/volume.svg" alt="volume" id="sound-img"/>
+<img src="/Images/volume.svg" alt="volume" id="vol-svg"/>
 </div>
-<input type="range" id="volume-range" onChange="volumne()">
+<input type="range" id="volume-range" min="0" max="100" value="100" oninput="volume()">
+
 
 </div>
 

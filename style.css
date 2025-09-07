@@ -16,7 +16,7 @@ header{
 }
 
 
-#playlist-img,#music-img,#sound-img {
+#playlist-img,#music-img,#sound-img,#vol-svg {
   filter: invert(1);
 }
 
