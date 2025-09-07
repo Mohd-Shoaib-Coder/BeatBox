@@ -4,6 +4,9 @@ let songImage=document.querySelector(".song-image")
 let playPauseImg=document.querySelector("#play-pause")
 let volumeRange=document.querySelector("#volume-range")
 let volSvg=document.querySelector("#vol-svg")
+let songRange=document.querySelector("#song-duration")
+
+
 
 let index=0;
 
@@ -95,7 +98,16 @@ function loadTrack(){
     songName.innerHTML=songs[index].name;
     songSinger.innerHTML=songs[index].singer;
     songImage.style=`background-image:url("${songs[index].image}")`
-    volume()
+    track.load();  // load audio file
+
+    songRange.value = 0; // reset slider
+    track.currentTime = 0; // reset audio to start
+
+    // update slider while song plays
+    track.ontimeupdate = () => {
+        songRange.max = track.duration;
+        songRange.value = track.currentTime;
+    };
 }
 
 loadTrack(index)
@@ -173,3 +185,7 @@ function volume(){
 
 }
 
+function duration(){
+
+    track.currentTime=songRange.value;
+}
